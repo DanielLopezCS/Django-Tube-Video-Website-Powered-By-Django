@@ -5,7 +5,7 @@ A project I began in order to exercise my back-end django skills and incorporati
 <br/>*Video Integration using Video.js
 <br/>*Responsive UI Design Using Semantic UI, Flexbox, and Media Queries 
 <br/>*User video uploading
-<br/>*User video search using Django's Q searching, searching video title, description, and author name.
+<br/>*User video search using Django's Q searching, i.e searching by video title, description, and author name.
 <br/>*User Comments
 <br/>*User Like/Dislikes on Videos/Comments
 <br/>*Counts total Views
