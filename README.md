@@ -24,3 +24,23 @@ A project I began in order to exercise my back-end django skills and incorporati
   <li>Video Like/Dislike/Views</li>
 </ul>
 <br/>
+
+Main Page:
+![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/videos.png "Video Search Page")
+
+Video Detail:
+![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/videodetail.png "Video Detail Page")
+
+Video Detail When Mobile:
+![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/smalldetail.png "Mobile Main Page")
+
+Upload Video Page:
+![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/upload.png "Upload Page")
+
+Video Search Pagnation:
+![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/videospagnation.png "Video Search Pagnation")
+
+Video Comment Pagnation:
+![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/commentpagnation.png "Video Comment Pagnation")
+
+
