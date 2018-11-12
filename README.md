@@ -34,6 +34,7 @@ Video Detail:
 Video Detail When Mobile:
 </br>
 ![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/smalldetail.png "Mobile Detail Page")
+</br>
 Upload Video Page:
 ![Alt text](https://github.com/DanielLopezCS/Django-Tube-Video-Website-Powered-By-Django/blob/master/upload.png "Upload Page")
 
