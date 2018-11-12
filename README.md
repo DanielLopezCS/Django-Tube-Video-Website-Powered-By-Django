@@ -20,7 +20,6 @@ A project I began in order to exercise my back-end django skills and incorporati
 <ul>  
   <li>User Registration</li>
   <li>Video/Image Uploads</li>
-  <li>Video Creation by User</li>
   <li>Video Search Using Django's Q Search</li>
   <li>Video/Comment Pagnation</li>
   <li>Video Like/Dislike/Views</li>
