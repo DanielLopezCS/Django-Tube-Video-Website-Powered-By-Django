@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
+
+  {% load static %}
+  <link rel='stylesheet' href= "{% static 'css/login-style.css' %}">
+
+
+</head>
+
+<body>
+
+  <div id="login">
+    <div class="container">
+      {% if error %}
+      <div class="alert alert-warning" id = 'warningText'>
+      <strong>Sign Up Unsuccessful!</strong> {{ error }}  .</div>
+
+      {% endif %}
+    	<div class="row">
+    	    <div class="col-sm-12">
+        	    <div class="form-wrap">
+                <h1 class ='text-center'>Join DjangoTube Today!</h1>
+
+                <form method="POST" action="{% url 'signup' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                        <div class="form-group">
+
+                            <label> Username </label>
+                            <input type="text"  class="form-control" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label> Profile Picture (optional) </label>
+                            <input type="file" class="form-control" name="picture">
+                        </div>
+                        <div class="form-group">
+                            <label> Password </label>
+                            <input type="password" class="form-control" name="password1">
+                        </div>
+                <div class="form-group">
+                            <label> Confirm Password </label>
+                            <input type="password" class="form-control" name="password2">
+                        </div>
+
+                        <input type="submit" id="btn-login" class="btn btn-outline-primary btn-lg btn-block" value="Sign Up">
+                    </form>
+
+                    <hr>
+        	    </div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+
+
+
+</body>
+
+</html>

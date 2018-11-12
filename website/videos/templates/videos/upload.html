@@ -1,0 +1,69 @@
+{% extends 'videos/base.html' %}
+{% block content %}
+
+<form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="container-2">
+
+    <div class="container-2-box">
+
+    </div>
+    <div class="container-2-box">
+      <div class='container-3'>
+        <div class='container-3-box'>
+
+              <div class="ui fluid segment">
+                <div class = 'center'>
+                  <label for="hidden-new-file" class="ui icon button ui huge teal floated" style='width:350px;'>
+                    <i class="ui upload icon"></i>
+                    Upload Video
+                  </label>
+                  <input type="file" id="hidden-new-file" style="display: none" name='video'>
+                </div>
+
+                <div class = 'center'>
+                  <label for="hidden-new-file2" class="ui icon button huge purple floated" style='width:350px; margin-top:15px;'>
+                    <i class="ui upload icon"></i>
+                    Upload Thumbnail
+                  </label>
+                  <input type="file" id="hidden-new-file2" style="display: none" name='thumbnail'>
+                </div>
+              </div>
+
+          <div class="ui form">
+            <div class="field">
+              <label>Title</label>
+              <input type="text" name="title">
+            </div>
+
+            <div class="ui form">
+              <div class="field">
+                <label>Description</label>
+                <textarea style="margin-top: 0px; margin-bottom: 0px; height: 165px;" name='description'></textarea>
+              </div>
+            </div>
+
+
+
+            <button class="ui gray button" type='submit' style='height:65px;width:150px;' name='submitbutton'>Upload</button>
+          </div>
+
+
+        </div>
+        <div class='container-3-box'>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-2-box">
+
+    </div>
+  </div>
+
+
+
+
+</form>
+
+{% endblock %}

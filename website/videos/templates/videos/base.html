@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+
+
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.css">
+  <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+
+</head>
+<div class="container-1" >
+  <div class="box-1">
+
+
+     <p >
+       <a href='{% url 'videos'  %}'>
+
+       <img id = 'logo' src = "/media/images/logo.png" height= 75 width = 125 class = 'right' />
+     </a>
+     </p>
+  </div>
+  <!-- This Flexbox will focus primarily on using search to find videos -->
+  <div class="box-2">
+
+  <div id = 'search'>
+    <form method = 'GET' action = '' class="ui form search">
+         <div class="ui action input">
+           <input size= 55 type="text" name='query' placeholder="Search" value = '{{ request.GET.query  }}'/>
+           <input type = 'submit' class="ui button teal" value = 'Find Videos'  ></input>
+         </div>
+
+       </form>
+
+
+
+
+    </form>
+
+    </div>
+  </div>
+  <div class="box-3">
+
+    <div id = 'account' class = 'center'>
+      <div id = 'buttons'>
+        {% if not user.is_authenticated %}
+      <button class="ui purple button account" onclick="window.location='{% url 'signup' %}';">Sign Up</button>
+      <button class="ui teal button account" onclick="window.location='{% url 'login' %}';">Log In</button>
+      {% else %}
+      <button class="ui purple button account"   onclick="window.location='{% url 'upload' %}';" >Upload</button>
+      <button class="ui teal button account" onclick="window.location='{% url 'logout' %}';">Log Out</button>
+        {% endif %}
+        </div>
+    </div>
+
+  </div>
+</div>
+
+{%block content%}
+
+{% endblock %}
+
+</body>
+<footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+</footer>
+
+</html>

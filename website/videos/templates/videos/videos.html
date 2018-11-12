@@ -1,0 +1,95 @@
+{% extends 'videos/base.html' %}
+{% load customtags %}
+{% block content %}
+
+
+<div class='center'>
+  <div class="container-3">
+
+
+{% for query in queryset %}
+<div class="container-3-box">
+  <div class='container-1'>
+
+    <div class='box-1'>
+
+      <a href = '{% url 'detail' query.id %}'><img src='{{query.thumbnail.url}}' height=250 width=250 class = 'border' > </img></a>
+
+    </div>
+    <div class='box-2'>
+      <a style = 'color:black;'href = '{% url 'detail' query.id %}'><h2>{{query.title}}</h2></a>
+      <p><i>
+          {{query.description}}
+        </i></p>
+
+      <hr />
+      <p>{{query.user.username}}</p>
+
+      <p style='color:teal;'> <b>{{query.views}} Views</b></p>
+
+      <label><i><b>Likes</b></i></label>
+      <div class="ui teal progress" data-value="15" data-total="20">
+        <div class="bar" style="width:{{ likes_percent|get_item:query.id }}%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endfor %}
+</div>
+</div>
+
+
+
+
+
+<!-- HERE IS WHERE WE SHOW VIDEOS USING PAGNATION-->
+<div class="pagination center">
+
+  <span class="step-links">
+    {% if queryset.has_previous %}
+
+    <a href="?page=1">
+      <div class="ui labeled button" tabindex="0">
+        <div class="ui purple button">
+          <i class="step forward
+                 icon"></i> First
+        </div>
+      </div>
+    </a>
+    <a href="?page={{ queryset.previous_page_number }}">
+      <div class="ui labeled button" tabindex="0">
+        <div class="ui teal button">
+          <i class="step forward
+             icon"></i> Previous
+        </div>
+      </div>
+    </a>
+    {% endif %}
+
+    <span class="current">
+      Page {{ queryset.number }} of {{ queryset.paginator.num_pages }}.
+    </span>
+    </br>
+    {% if queryset.has_next %}
+    <a href="?page={{ queryset.next_page_number }}">
+      <div class="ui labeled button" tabindex="0">
+        <div class="ui purple button">
+          <i class="play icon"></i> Next
+        </div>
+      </div>
+
+    </a>
+    <a href="?page={{ queryset.paginator.num_pages }}">
+      <div class="ui labeled button" tabindex="0">
+        <div class="ui teal button">
+          <i class="step forward
+             icon"></i> Last
+        </div>
+      </div>
+    </a>
+    {% endif %}
+  </span>
+</div>
+{% endblock %}

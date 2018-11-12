@@ -1,0 +1,254 @@
+/* Called After Collapse*/
+@media(max-width:1200px){
+
+  #logo
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
+
+  }
+  img.recommend
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
+  }
+
+  #buttons
+  {
+    margin-left: auto;
+    margin-right: 23%;
+    width: 50%;
+
+
+
+  }
+    div.center
+{
+    width: 50%;
+    margin-top:2rem;
+
+}
+
+  #search{
+    width: 50%;
+    margin-top:2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Called When Mobile*/
+@media(max-width:860px){
+
+  #account{
+    margin-right:21%;
+
+  }
+    #search{
+    width: 50%;
+    margin-top:2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Called Before Collapse*/
+@media(min-width:1200px){
+  div.center
+{
+    width: 50%;
+    margin-top:2rem;
+
+}
+    .container-1{
+      display:flex;
+
+      /*
+      justify-content:flex-end;
+      align-items:flex-start;
+      align-items:flex-end;
+      align-items:center;
+
+      flex-direction:column;
+      */
+    }
+
+
+    .container-2{
+      display:flex;
+
+      /*
+      justify-content:space-between;
+      justify-content:flex-start;
+      justify-content:flex-end;
+      justify-content:center;
+      justify-content:space-around;
+      */
+      justify-content:space-between;
+
+    }
+  }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+  .container-3{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    flex-direction: column;
+
+
+       /*
+      justify-content:flex-start;
+      justify-content:flex-end;
+      justify-content:center;
+      justify-content:space-around;
+     justify-content:space-between;
+      */
+
+  }
+
+  .container-1 div, .container-2 div, .container-3 div{
+    /*border:1px #ccc solid;*/
+   /* padding:10px;*/
+
+
+  }
+
+
+  .box-1{
+    flex:1;
+    order:1;
+  }
+
+  .box-2{
+    flex:2;
+    order:2;
+
+  }
+
+  .box-3{
+    flex:1;
+    order: 2;
+
+  }
+.recommendations{
+  margin-top:2rem;
+}
+
+.search
+{
+  margin-top:2rem;
+}
+.description
+{
+  margin-top:1%;
+  margin-left:6%;
+
+}
+
+input.padding
+{
+  margin-top:2rem;
+  padding:5px;
+}
+.container-1-box{
+    flex-basis: 54%;
+  }
+
+  .container-2-box{
+    flex-basis: 34%;
+  }
+
+  .container-3-box{
+    flex-basis:50%;
+  }
+
+img
+{
+  margin-top:10px;
+
+}
+.right {
+    float: right;
+    padding: 5px;
+}
+#logo
+{
+  padding:15px;
+
+}
+button.account
+{
+  height:35px;
+  width:100px;
+}
+.left
+{
+  float:left;
+
+}
+.border
+{
+   border-style: solid;
+   border-color: gray;
+   border-width: 2px 2px 2px 2px;
+}
+
+.round {
+  border-color:black;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 50px;
+
+}
+
+textarea {
+   resize: none;
+
+}
+
+.creator
+{
+  margin-top:-55px;
+  margin-left:95px;
+  font-size:2rem;
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.button-comment
+{
+  height:55px;
+  width:55px;
+}
+.button-pagnation
+{
+  width:150px;
+  height:35px;
+}
+
+.grid.container {
+  margin-top: 5em;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
